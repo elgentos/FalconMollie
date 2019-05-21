@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2018 Magmodules.eu. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="mollie">
+                <group id="mollie_deity" translate="label">
+                    <label>Deity</label>
+                    <field id="webhook_url" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Webhook URL</label>
+                        <comment><![CDATA[Leave empty for default. Should be a publicly available URL otherwise Mollie will give an error]]></comment>
+                    </field>
+                    <field id="redirect_url" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Redirect URL</label>
+                        <comment><![CDATA[Should be a publicly available (Deity Falcon) URL otherwise Mollie will give an error. Get parameters orderId and paymentToken will automatically be added. Leave empty for default Magento 2 frontend URL.]]></comment>
+                    </field>
+                </group>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- PLUGINS -->
+    <type name="Deity\CheckoutApi\Api\GuestPaymentInformationManagementInterface">
+        <plugin name="mollie_update_order_response" type="Elgentos\FalconMollie\Plugin\Checkout\GuestPaymentInformationManagement" />
+    </type>
+    <type name="Deity\CheckoutApi\Api\PaymentInformationManagementInterface">
+        <plugin name="mollie_update_order_response" type="Elgentos\FalconMollie\Plugin\Checkout\PaymentInformationManagement" />
+    </type>
+    <type name="Deity\QuoteApi\Api\CartManagementInterface">
+        <plugin name="mollie_update_order_response" type="Elgentos\FalconMollie\Plugin\Quote\CartManagement" />
+    </type>
+    <type name="Deity\QuoteApi\Api\GuestCartManagementInterface">
+        <plugin name="mollie_update_order_response" type="Elgentos\FalconMollie\Plugin\Quote\GuestCartManagement" />
+    </type>
+</config>

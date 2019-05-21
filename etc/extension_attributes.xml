@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/extension_attributes.xsd">
+    <extension_attributes for="Deity\QuoteApi\Api\Data\OrderResponseInterface">
+        <attribute code="mollie_data" type="Elgentos\FalconMollie\Api\Data\MollieResponseInterface" />
+    </extension_attributes>
+</config>
