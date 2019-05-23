@@ -10,7 +10,8 @@
     <system>
         <section id="payment">
             <group id="mollie">
-                <group id="mollie_deity" translate="label">
+                <group id="mollie_deity" translate="label" type="text" sortOrder="101" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
                     <label>Deity</label>
                     <field id="webhook_url" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Webhook URL</label>
