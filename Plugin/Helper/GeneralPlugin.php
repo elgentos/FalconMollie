@@ -43,7 +43,7 @@ class GeneralPlugin
         // Merge the query parameters
         $queryParameters = array_merge(
             $parsedUrl['query'] ? $this->convertUrlQuery($parsedUrl['query']) : [],
-            isset($redirectUrlFromConfig['query'] && $redirectUrlFromConfig['query']) ? $this->convertUrlQuery($redirectUrlFromConfig['query']) : []
+            isset($redirectUrlFromConfig['query']) && $redirectUrlFromConfig['query'] ? $this->convertUrlQuery($redirectUrlFromConfig['query']) : []
         );
         $redirectUrlFromConfig['query'] = http_build_query($queryParameters);
 
