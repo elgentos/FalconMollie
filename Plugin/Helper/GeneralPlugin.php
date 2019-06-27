@@ -39,16 +39,17 @@ class GeneralPlugin
         }
 
         $parsedUrl = parse_url($result);
+        $parsedRedirectUrl = parse_url($redirectUrlFromConfig);
 
         // Merge the query parameters
         $queryParameters = array_merge(
-            $parsedUrl['query'] ? $this->convertUrlQuery($parsedUrl['query']) : [],
-            isset($redirectUrlFromConfig['query']) && $redirectUrlFromConfig['query'] ? $this->convertUrlQuery($redirectUrlFromConfig['query']) : []
+            isset($parsedUrl['query']) && $parsedUrl['query'] ? $this->convertUrlQuery($parsedUrl['query']) : [],
+            isset($parsedRedirectUrl['query']) && $parsedRedirectUrl['query'] ? $this->convertUrlQuery($parsedRedirectUrl['query']) : []
         );
-        $redirectUrlFromConfig['query'] = http_build_query($queryParameters);
+        $parsedRedirectUrl['query'] = http_build_query($queryParameters);
 
         // Merge the two URL part arrays
-        $resultingUrl = array_merge($parsedUrl, $redirectUrlFromConfig);
+        $resultingUrl = array_merge($parsedUrl, $parsedRedirectUrl);
 
         // Return combined URL
         return http_build_url($resultingUrl);
