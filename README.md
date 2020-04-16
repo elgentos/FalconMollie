@@ -1,6 +1,3 @@
-# Deprecation notice
-This extension is now deprecated due to built-in functionality for a [custom redirect URL](https://github.com/mollie/magento2/wiki/PWA-integration#start-transaction) in the [Mollie Magento 2 extension](https://github.com/mollie/magento2).
-
 # Elgentos Falcon Mollie implementation
 
 This Magento 2 module facilitates the implementation of the [Mollie](http://mollie.nl) [iDeal](https://www.ideal.nl/) payment method into [Deity Falcon](https://falcon.deity.io/).
