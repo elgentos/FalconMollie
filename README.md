@@ -1,6 +1,6 @@
 # Elgentos Falcon Mollie implementation
 
-This Magento 2 module facilitates the implementation of the [Mollie](http://mollie.nl) [iDeal](https://www.ideal.nl/) payment method into [Deity Falcon](https://falcon.deity.io/).
+This Magento 2 module facilitates the implementation of the [Mollie](http://mollie.nl) [iDeal](https://www.ideal.nl/) & Bancontact payment method into [Deity Falcon](https://falcon.deity.io/).
 
 ## Implementation
 
